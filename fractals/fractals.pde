@@ -14,18 +14,21 @@ void draw() {
   frameRate(30);
   stroke(0);
   //timer += 1;
-  theta +=33.3330;
+  //theta +=4;
   translate (width/2, height/2);
-  
+  ellipse(0, 0, 355, 355);
+  stickLength += 0.1;
+  strokeSize += 0.001;
   strokeWeight(strokeSize);
   line(0, 0, 0, stickLength);
   stick(stickLength);
+  //noLoop();
 }
 
 void stick(float h) {
-  h*=0.6666;
- 
-  if (h>3) {
+  h*=0.666666;
+ theta=PI/5;
+  if (h>2) {
     pushMatrix();
     rotate(theta);
     line(0, 0, 0, -h);
